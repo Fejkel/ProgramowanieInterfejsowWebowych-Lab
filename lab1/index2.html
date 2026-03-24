@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiceParadise</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <a href="index.html" ><h1>DiceParadise</h1></a>
+        <nav>
+            <button>Logowanie</button>
+            <button>Koszyk</button>
+            <a href="index2.html"><button>Dodaj grę</button></a>
+        </nav>
+    </header>
+    <main>
+        <section class="filtry">
+            <h2>Filtry</h2>
+            <form action="#" onsubmit="return false;">
+                <label for="wyszukaj-opis">Szukaj w opisie: </label>
+                <input id="wyszukaj-opis" type="text" placeholder="Szukaj w opisie">
+
+                <label>Cena:</label>
+                <input type="number" placeholder="Od">
+                <input type="number" placeholder="Do">
+
+                <label for="liczba-graczy">Liczba graczy:</label>
+                <input id="liczba-graczy" type="number" placeholder="Ilu">
+                
+                <label for="wydawnictwo">Wydawnictwo:</label>
+                <input id="wydawnictwo" type="text" placeholder="Wydawnictwo">
+
+                <label for="rodzaj">Rodzaj:</label>
+                <select id="rodzaj">
+                    <option>Wszystkie</option>
+                    <option>Strategiczna</option>
+                    <option>Imprezowa</option>
+                </select>
+
+                <label for="CzasGry">Czas gry:</label>
+                <input id="CzasGry" type="text" placeholder="np. 30-60 min">
+
+                <button type="submit">Szukaj</button>
+            </form>
+        </section>
+        <section class="wyniki">
+            <h2>Lista gier</h2>
+
+            <article class="karta-gry">
+                <h3>Osadnicy z Catanu</h3>
+                <p>Strategiczna gra ekonomiczna...</p>
+                <p>Cena: 120 zł</p>
+                <p>Liczba graczy: 3-4</p>
+                <p>Czas gry: 60 min</p>
+                <button>Dodaj do koszyka</button>
+            </article>
+
+            <article class="karta-gry">
+                <h3>Dixit</h3>
+                <p>Gra imprezowa z kartami...</p>
+                <p>Cena: 90 zł</p>
+                <p>Liczba graczy: 3-6</p>
+                <p>Czas gry: 30 min</p>
+                <button>Dodaj do koszyka</button>
+            </article>
+        </section>
+    </main>
+  </body>
+</html>
