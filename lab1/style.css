@@ -10,7 +10,7 @@ body {
   color: #c7d5e0;
   font-family: Arial, sans-serif;
 }
-
+/* index1.html */
 header{
   background-color: #16202d;
   display: flex;
@@ -207,8 +207,84 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+/* index2.html */
+.strona-produktu {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
 
+  margin-top: 20px;
+  align-items: start;
+}
+
+.zdjecie-produktu img {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #2a475e;
+  object-fit: cover;
+}
+
+.szczegoly-produktu {
+  background-color: #16202d;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #2a475e;
+}
+
+.szczegoly-produktu h2 {
+  margin-bottom: 10px;
+  color: #66c0f4;
+}
+
+.opis-produktu {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #9ebbd1;
+}
+
+.informacje-o-produkcie {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.cena-produktu {
+  background-color: #16202d;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #2a475e;
+  height: fit-content;
+}
+
+.cena-produktu p{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #66c0f4;
+}
+
+.przycisk-kup {
+  width: 100%;
+  padding: 10px;
+  background-color: #23354b;
+  color: #c7d5e0;
+  border: 1px solid #2a475e;
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.przycisk-kup:hover {
+  background-color: #66c0f4;
+  color: #1b2838;
+  border-color: #66c0f4;
+}
+
+@media (max-width: 768px) {
+  /* resposywnosc */
   header{
     display: flex;
     flex-direction: column;
@@ -218,5 +294,9 @@ footer {
   }
   .filtry button {
     grid-column: 1/ -1;
+  }
+
+  .strona-produktu {
+    grid-template-columns: 1fr;
   }
 }
