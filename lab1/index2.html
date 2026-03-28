@@ -6,66 +6,188 @@
     <title>DiceParadise</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+  
   <body>
     <header>
-        <a href="index.html" ><h1>DiceParadise</h1></a>
+        <h1><a href="index.html" >DiceParadise</a></h1>
         <nav>
-            <button>Logowanie</button>
-            <button>Koszyk</button>
-            <a href="index2.html"><button>Dodaj grę</button></a>
+            <button type="button" name="login-button" class="nav-button">Logowanie</button>
+            <button type="button" name="koszyk-button" class="nav-button">Koszyk</button>
         </nav>
     </header>
     <main>
         <section class="filtry">
             <h2>Filtry</h2>
             <form action="#" onsubmit="return false;">
-                <label for="wyszukaj-opis">Szukaj w opisie: </label>
-                <input id="wyszukaj-opis" type="text" placeholder="Szukaj w opisie">
+                <div class="filter">
+                    <label>Cena:</label>
+                    <input id="cena-od" name="cena-od" type="number" placeholder="Od">
+                    <input id="cena-do" name="cena-do" type="number" placeholder="Do">
+                </div>
 
-                <label>Cena:</label>
-                <input type="number" placeholder="Od">
-                <input type="number" placeholder="Do">
+                <div class="filter">
+                    <label>Liczba graczy:</label>
+                    <input id="liczba-gracz-min" name="liczba-gracz-min" type="number" placeholder="Od">
+                    <input id="liczba-gracz-max" name="liczba-gracz-max" type="number" placeholder="Do">
+                </div>
 
-                <label for="liczba-graczy">Liczba graczy:</label>
-                <input id="liczba-graczy" type="number" placeholder="Ilu">
-                
-                <label for="wydawnictwo">Wydawnictwo:</label>
-                <input id="wydawnictwo" type="text" placeholder="Wydawnictwo">
+                <div class="filter">
+                    <label for="rodzaj">Rodzaj:</label>
+                    <select id="rodzaj" name="rodzaj">
+                        <option value="all-games">Wszystkie</option>
+                        <option value="strategy">Strategiczna</option>
+                        <option value="party-game">Imprezowa</option>
+                        <option value="for-family">Rodzinne</option>
+                        <option value="for-kids">Dla dzieci</option>
+                        <option value="adventure-game">Przygodowe</option>
+                        <option value="extensions">Dodatki</option>
+                    </select>
+                </div>
 
-                <label for="rodzaj">Rodzaj:</label>
-                <select id="rodzaj">
-                    <option>Wszystkie</option>
-                    <option>Strategiczna</option>
-                    <option>Imprezowa</option>
-                </select>
+                <div class="filter">
+                    <label for="wydawnictwo">Wydawnictwo:</label>
+                    <input id="wydawnictwo" name="wydawnictwo" type="text" placeholder="Wydawnictwo">
+                </div>
 
-                <label for="CzasGry">Czas gry:</label>
-                <input id="CzasGry" type="text" placeholder="np. 30-60 min">
+                <div class="filter">
+                    <label>Czas gry:</label>
+                    <input id="czas-gry-od" name="czas-gry-od" type="number" placeholder="Od">
+                    <input id="czas-gry-do" name="czas-gry-do" type="number" placeholder="Do">
+                </div>
+
+                <div class="filter">
+                    <label for="wyszukaj-opis">Szukaj w opisie:</label>
+                    <input name="wyszukaj-opis" id="wyszukaj-opis" type="text" placeholder="Szukaj">
+                </div>
 
                 <button type="submit">Szukaj</button>
             </form>
         </section>
         <section class="wyniki">
             <h2>Lista gier</h2>
+            <div class="lista-gier">
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/dixit.png" alt="Dixit">
 
-            <article class="karta-gry">
-                <h3>Osadnicy z Catanu</h3>
-                <p>Strategiczna gra ekonomiczna...</p>
-                <p>Cena: 120 zł</p>
-                <p>Liczba graczy: 3-4</p>
-                <p>Czas gry: 60 min</p>
-                <button>Dodaj do koszyka</button>
-            </article>
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">Dixit</h3>
 
-            <article class="karta-gry">
-                <h3>Dixit</h3>
-                <p>Gra imprezowa z kartami...</p>
-                <p>Cena: 90 zł</p>
-                <p>Liczba graczy: 3-6</p>
-                <p>Czas gry: 30 min</p>
-                <button>Dodaj do koszyka</button>
-            </article>
+                        <p class="karta-gry-opis">
+                            Gra imprezowa z kartami Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia expedita molestias veritatis corporis voluptas voluptate officia voluptates? Fuga, ab unde dolores consectetur maxime provident ratione earum libero iusto dolorum vitae!
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 90 zł</li>
+                            <li><strong>Gracze:</strong> 3-6</li>
+                            <li><strong>Czas:</strong> 30 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/catan.jpg" alt="Osadnicy z Catanu">
+
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">Osadnicy z Catanu</h3>
+
+                        <p class="karta-gry-opis">
+                            Strategiczna gra ekonomiczna o budowaniu osad i handlu surowcami.
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 120 zł</li>
+                            <li><strong>Gracze:</strong> 3-4</li>
+                            <li><strong>Czas:</strong> 60-90 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/carcassonne.png" alt="Carcassonne">
+
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">Carcassonne</h3>
+
+                        <p class="karta-gry-opis">
+                            Gra kafelkowa polegająca na budowaniu średniowiecznego krajobrazu.
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 85 zł</li>
+                            <li><strong>Gracze:</strong> 2-5</li>
+                            <li><strong>Czas:</strong> 35 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/monopoly.jpg" alt="Monopoly">
+
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">Monopoly</h3>
+
+                        <p class="karta-gry-opis">
+                            Klasyczna gra o kupowaniu nieruchomości i zarządzaniu finansami.
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 100 zł</li>
+                            <li><strong>Gracze:</strong> 2-6</li>
+                            <li><strong>Czas:</strong> 60-180 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/dobble.jpg" alt="Dobble">
+
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">Dobble</h3>
+
+                        <p class="karta-gry-opis">
+                            Szybka gra refleksowa polegająca na znajdowaniu wspólnych symboli.
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 60 zł</li>
+                            <li><strong>Gracze:</strong> 2-8</li>
+                            <li><strong>Czas:</strong> 15 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+                <article class="karta-gry">
+                    <img src="zdjecia-gier/7wonders.jpg" alt="7 Cudów Świata">
+
+                    <div class="karta-gry-body">
+                        <h3 class="karta-gry-tytul">7 Cudów Świata</h3>
+
+                        <p class="karta-gry-opis">
+                            Gra karciana o rozwoju cywilizacji i budowie potęgi imperium.
+                        </p>
+
+                        <ul class="karta-gry-detale">
+                            <li><strong>Cena:</strong> 140 zł</li>
+                            <li><strong>Gracze:</strong> 2-7</li>
+                            <li><strong>Czas:</strong> 30 min</li>
+                        </ul>
+
+                        <button class="btn-koszyk">Dodaj do koszyka</button>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
+    <footer>
+        <p>2026 DiceParadise</p>
+        <p>Autor: Kacper Mikosiński 280985</p>
+        <p>Kontakt: kacpermik529@gmail.com</p>
+    </footer>
   </body>
+
 </html>

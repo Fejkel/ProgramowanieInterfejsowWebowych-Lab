@@ -2,4 +2,221 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+
+body {
+  background-color: #1b2838;
+  color: #c7d5e0;
+  font-family: Arial, sans-serif;
+}
+
+header{
+  background-color: #16202d;
+  display: flex;
+  justify-content: space-between;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  align-items: center;
+}
+
+header a {
+  color: #66c0f4;
+  text-decoration: none;
+  text-shadow: 2px 2px #2a475e ;
+}
+
+header nav{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+main{
+  max-width: 1900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-button {
+  height: 2.2rem;
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c7d5e0;
+  background-color: #23354b;
+
+  border: 1px solid #2a475e;
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+header nav button:hover,
+.filtry button:hover {
+  background-color: #66c0f4;
+  color: #1b2838;
+  border-color: #66c0f4;
+}
+
+.filtry {
+  margin-top: 20px;
+  background-color: #16202d;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #2a475e;
+}
+
+
+.filtry form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  
+  align-items: start;
+}
+
+.filtry button {
+  background-color: #23354b;
+  color: #c7d5e0;
+  border: none;
+  padding: 10px 16px;
+  border: 1px solid #2a475e;
+  border-radius: 6px;
+  
+  grid-column-start: -2;
+  order: 1;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.filter input,
+.filter select {
+  background-color: #0f1722;
+  border: 1px solid #2a475e;
+  border-radius: 6px;
+  padding: 6px 6px;
+  color: #c7d5e0;
+  outline: none;
+}
+
+.filter label{
+  font-size: 0.85rem;
+  color: #9ebbd1;
+}
+
+.wyniki {
+  margin-top: 20px;
+  background-color: #16202d;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #2a475e;
+}
+.lista-gier {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  justify-content: center;
+}
+
+.karta-gry {
+  margin: 10px;
+  background-color: #16202d;
+  border: 1px solid #2a475e;
+  border-radius: 10px;
+  
+  overflow: hidden;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.2s;
+}
+
+.karta-gry img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.karta-gry-body{
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.karta-gry-opis {
+  font-size: 0.85rem;
+  color: #9ebbd1;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+}
+
+.karta-gry-detale {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-size: 0.8rem;
+  color: #c7d5e0;
+}
+
+.btn-koszyk {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #23354b;
+  color: #c7d5e0;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-koszyk:hover {
+  background-color: #66c0f4;
+  color: #1b2838;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+  header nav{
+    justify-content: center;
+  }
+  .filtry button {
+    grid-column: 1/ -1;
+  }
 }
