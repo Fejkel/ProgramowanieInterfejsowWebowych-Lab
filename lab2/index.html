@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO-WEB-LIST</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  
+  <body>
+    <div class="glowny-kontener">
+        <header>
+            <h1><a href="index.html" >TODO-WEB-LIST</a></h1>
+        </header>
+        <nav>
+            <div class="wyszukaj-kontener">
+                <input type="text" id="searchInput" placeholder="Wyszukaj zadanie...">
+                <div class="case-sensitive">
+                    <input type="checkbox" id="case-insensitive" checked>
+                    <label for="case-insensitive">UwzgLęDNIć WilKOść liTer?</label>
+                </div>
+            </div>
+
+            <div class="dodaj-notatke-kontener">
+                <input type="text" placeholder="Wpisz nową notatkę..." name="new-note" id="new-note"/>
+                <select id="wybor-listy">
+                    <option value="wazne">Wazne</option>
+                    <option value="zwykle">Zwykłe</option>
+                </select>
+                <button for="new-note" type="button" name="new-note-button" class="nav-button">Dodaj notatkę</button>
+            </div>
+
+            <div class="dodaj-liste-kontener">
+                <input type="text" placeholder="Wpisz nazwę nowej listy..." name="new-list" id="new-list"/>
+                <button for="new-list" type="button" name="new-list-button" class="nav-button">Dodaj listę</button>
+            </div>
+            <div class="cofnij-kontener">
+                <button id="cofnij-button" disabled>Cofnij usunięcie</button>
+            </div>
+        </nav> 
+        <main> 
+            <section class="notatki">
+                <div class="lista-notatek">
+                    <h2 class="lista-header">Ważne</h2>
+                    <div class="lista-items">
+                        <article class="notatka">
+                            <p>Przykładowa notatka 1</p>
+                            <span class="completion-date"></span>
+                            <button type="button" class="delete-button">X</button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text">blablabla</p>
+            <button id="confirm-delete">Tak, usuń</button>
+            <button id="cancel-delete">Nie usuwaj</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
