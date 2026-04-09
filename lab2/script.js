@@ -24,7 +24,7 @@ function toggleListCollapse(headerElement) {
     const wrapList = headerElement.closest('.lista-notatek');
     const itemsContainer = wrapList.querySelector('.lista-items');
     if (itemsContainer) {
-        itemsContainer.classList.toggle('ukryte');
+        wrapList.classList.toggle('ukryte');
     }
 }
 function createNote(){

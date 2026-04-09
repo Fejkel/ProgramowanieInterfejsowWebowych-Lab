@@ -162,9 +162,12 @@ main {
   transition: 0.5s;
 }
 
-.lista-items.ukryte{ 
+.lista-notatek.ukryte .lista-items{ 
   display: none; 
 }  
+.lista-notatek.ukryte, .lista-notatek.ukryte .lista-header{
+  background-color: #c9c9c9;
+}
 
 .notatka { 
   display: flex;
