@@ -30,7 +30,7 @@ function toggleListCollapse(headerElement) {
 function createNote(){
     const noteText = newNoteInput.value;
     const selectedList = newNoteListSection.value;
-    if (noteText === ''){
+    if (noteText.trim() === ''){
         alert('Nie można dodać pustej notatki!');
         return;
     }else if (!tasks[selectedList]) {
@@ -123,7 +123,7 @@ function showModal(text, elementToDelete, listType) {
         elementToDelete.remove();
         undoButton.disabled = false;
         deleteModal.style.display = "none";
-    }
+    };
     cancelDeleteButton.onclick = () => {
         deleteModal.style.display = "none";
     };  
@@ -177,6 +177,14 @@ function init() {
             undoButton.disabled = true;
         }
     });
+
+    window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+        if (!undoButton.disabled) {
+            undoButton.click();
+        }
+    };
+});
 }
 
 init();
