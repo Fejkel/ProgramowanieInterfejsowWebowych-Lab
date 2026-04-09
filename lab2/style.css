@@ -154,16 +154,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-.znaczek { 
-  background-color: #6366f1;
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
-  transition: transform 0.3s ease;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
+
 .lista-items { 
   display: flex;
   flex-direction: column;
