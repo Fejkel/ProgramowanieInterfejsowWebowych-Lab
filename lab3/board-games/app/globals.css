@@ -60,8 +60,8 @@ main{
   transition: 0.2s;
 }
 
-header nav button:hover,
-.filtry button:hover {
+.filtry button:hover,
+.nav-button:hover{
   background-color: #66c0f4;
   color: #1b2838;
   border-color: #66c0f4;
@@ -341,6 +341,57 @@ footer {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #2a475e;
+}
+
+/* Klasy pomocnicze dla układu formularza */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #16202d;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #2a475e;
+  width: fit-content;
+}
+
+.form-edycja textarea {
+  background-color: #0f1722;
+  color: #c7d5e0;
+  border: 1px solid #2a475e;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.form-edycja textarea:focus {
+  border-color: #66c0f4;
+}
+
+.btn-submit {
+  background-color: #23354b;
+  color: #c7d5e0;
+  border: 1px solid #2a475e;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #66c0f4;
+  color: #1b2838;
+  border-color: #66c0f4;
 }
 
 @media (max-width: 768px) {

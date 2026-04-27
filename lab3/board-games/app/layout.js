@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
           <nav>
             <button className="nav-button">Logowanie</button>
             <button className="nav-button">Koszyk</button>
-            <Link href="/games/add" className="nav-button">Dodaj grę</Link>
+            <Link href="/add" className="nav-button">Dodaj grę</Link>
           </nav> 
         </header>
         

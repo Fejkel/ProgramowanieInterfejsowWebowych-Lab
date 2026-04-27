@@ -6,7 +6,9 @@ export async function getAllGames() {
             return gamesCache;
         }
 
-        const res = await fetch('https://szandala.github.io/piwo-api/board-games.json');
+        const res = await fetch('https://szandala.github.io/piwo-api/board-games.json', {
+            cache: 'no-store' 
+        });
         if (!res.ok) throw new Error('Błąd pobierania danych');
         
         const data = await res.json();
@@ -38,10 +40,30 @@ export async function updateGame(id, updatedData) {
     const index = games.findIndex(g => g.id.toString() === id);
     
     if (index !== -1) {
-        // Łączymy stare dane z nowymi
         games[index] = { ...games[index], ...updatedData };
-        gamesCache = games; // Aktualizujemy nasz "cache"
+        gamesCache = games;
         return true;
     }
     return false;
+}
+export async function addGame(newGameData) {
+    const games = await getAllGames();
+    
+    // Zabezpieczenie przed NaN i błędnymi ID
+    const validIds = games
+        .map(g => parseInt(g.id))
+        .filter(id => !isNaN(id));
+
+    const newId = validIds.length > 0 
+        ? Math.max(...validIds) + 1 
+        : 1;
+
+    const gameToAdd = { 
+        ...newGameData, 
+        id: newId 
+    };
+
+    gamesCache = [...games, gameToAdd];
+    console.log("Dodano grę, nowa liczba gier w cache:", gamesCache.length);
+    return gameToAdd;
 }

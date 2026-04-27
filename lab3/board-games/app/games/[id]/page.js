@@ -38,6 +38,13 @@ export default async function GameDetailsPage({ params }) {
             <h3>Cena</h3>
             <p name="cena">{game.price_pln} zł</p>
             <button className="przycisk-kup">Dodaj do koszyka</button>
+            <Link 
+                href={`/edit/${id}`} 
+                className="nav-button" 
+                style={{ width: '100%', marginTop: '10px', display: 'flex' }}
+            >
+                Edytuj grę
+            </Link>
         </aside>
     </main>
   );
